@@ -359,10 +359,10 @@ a:hover {
   font-weight: 600;
 }
 /* Foooter CSS */
-body {
+/* body {
   margin: 0;
   font-family: Arial, sans-serif;
-}
+} */
 
 .footer {
   background-color: black;
@@ -465,6 +465,8 @@ a {
   height: 30px;
   background-color: white;
   border-radius: 4px;
+  /* margin-top: 100px; */
+  padding-top: 50px;
 }
 
 .currency {
@@ -487,20 +489,9 @@ a {
 .payment-icons {
   display: flex;
   gap: 10px;
+  margin-top: 5%;
 }
 
-.payment-icon {
-  background-color: white;
-  padding: 6px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.payment-icon img {
-  height: 40px;
-}
 @media (max-width: 768px) {
   .footer-grid {
     grid-template-columns: 1fr;
@@ -508,6 +499,14 @@ a {
 
   .footer-links {
     grid-template-columns: 1fr;
+  }
+  .card {
+    width: 300px;
+    height: 462px;
+  }
+  .card img {
+    width: 280px;
+    height: 330px;
   }
 }
 @media (max-width: 768px) {
