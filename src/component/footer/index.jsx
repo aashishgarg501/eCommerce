@@ -76,14 +76,6 @@ const Footer = () => {
                                 </svg>
                             </div>
                             <h2 style={{ marginTop: "50px" }}>mettā muse ACCEPTS</h2>
-                            {/*  <div class="payment-methods">
-                                <div class="payment-icon"></div>
-                                <div class="payment-icon"></div>
-                                <div class="payment-icon"></div>
-                                <div class="payment-icon"></div>
-                                <div class="payment-icon"></div>
-                                <div class="payment-icon"></div>
-                            </div> */}
                             <div className="payment-methods" >
                                 {paymentMethods.map((method, index) => (
                                     <div key={index} className='payment-icons'>

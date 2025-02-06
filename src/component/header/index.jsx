@@ -1,12 +1,13 @@
-import React from 'react';
-// import './Header.css';
+import React, { useState } from 'react';
 
 const Header = () => {
+    const [isOpen, setIsOpen] = useState(false);
     return (
         <header className="header">
             <div className="headerContainer">
                 <div className="headerTop">
                     <div className="logo">
+                        <div className='open-sidebar' onClick={() => setIsOpen(true)}> ☰  </div>
                         <img src="https://mettamuse-staging.gumlet.io/logo_icon_53c650c8f9.svg" alt="Logo" />
                     </div>
 
@@ -40,6 +41,15 @@ const Header = () => {
                         ))}
                     </ul>
                 </nav>
+
+                {/*Mobile Sidebar */}
+                <div className={`offcanvas ${isOpen ? "open" : ""}`}>
+                    <button className="close-btn" onClick={() => setIsOpen(false)}>
+                        ✖
+                    </button>
+                    {['SHOP', 'STORIES', 'SKILLS', 'ABOUT', 'CONTACT US'].map((item) => (
+                        <a href="#">{item}</a>))}
+                </div>
             </div>
         </header>
     );

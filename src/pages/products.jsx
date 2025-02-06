@@ -5,16 +5,14 @@ import { getData } from '../repository'
 import { get_product_list_API } from '../api'
 
 const Products = () => {
-    const [isFilterVisible, setIsFilterVisible] = useState(true)
+    const [isFilterVisible, setIsFilterVisible] = useState(false)
     const [products, setProduct] = useState([])
-    const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     useEffect(() => {
         productList()
     }, [])
     const productList = async () => {
         try {
             const response = await getData(get_product_list_API)
-            console.log(response);
             setProduct(response)
         }
         catch (error) {
@@ -46,9 +44,6 @@ const Products = () => {
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M10 5l7 7-7 7"></path>
                                     </svg>
-
-
-
                                 </>
                         }
 
